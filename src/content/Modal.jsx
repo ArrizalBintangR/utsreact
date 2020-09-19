@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+// import img from './img/star.png';
+// import img2 from './img/basket.png';
 
 class Modal extends Component {
   constructor(props) {
@@ -72,25 +74,26 @@ class Modal extends Component {
     console.log(this.state.item);
   }
 
+
   render() {
     return (
-      <div className="modal fade" id="pesanModal" tabIndex="-1" aria-labelledby="pesanModal" aria-hidden="true">
+      <div className="modal fade" id="pesanModal" tabIndex="-1" aria-labelledby="pesanModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-body d-flex justify-content-center flex-column">
               <img src={this.state.item ? this.state.item.image : 'https://belajar-react.smkmadinatulquran.sch.id/image/masakan1.jpg'} className="img-modal img-thumbnail" />
               <h3>{this.state.item ? this.state.item.name : ''}</h3>
               <div className="wrapper d-flex">
-                {/* <p className="mr-2">⭐ {this.state.item ? this.state.item.rating : ''}</p> */}
+                <p className="mr-2">{this.state.item ? this.state.item.rating : ''}</p>
                 <p>Rp. {this.state.item ? this.state.item.harga : ''}</p>
               </div>
             </div>
             <div className="modal-footer d-flex justify-content-around">
               <p className="stock">Stock: {this.state.item ? this.state.item.jumlah : ''}</p>
               <div className="wrapper">
-                <button type="button" className="btn btn-orange" onClick={_ => this.onClickHandler('-')}> - </button>
+                <button type="button" className="btn btn-primary" onClick={_ => this.onClickHandler('-')}> - </button>
                 <input type="text" className="number text-center" disabled value={this.state.item ? this.state.item.pesan : ''} />
-                <button type="button" className="btn btn-orange" onClick={_ => this.onClickHandler('+')}>+</button>
+                <button type="button" className="btn btn-primary" onClick={_ => this.onClickHandler('+')}>+</button>
                 <button type="button" className="btn btn-orange ml-2" data-dismiss="modal" onClick={this.onOrderHandler}>Pesan</button>
               </div>
             </div>

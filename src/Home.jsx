@@ -3,47 +3,47 @@ import Promo from './content/Promo'
 import Order from './content/Order'
 import Modal from './content/Modal'
 import Category from './content/Category'
-import Food from './content/Food'
+import Popular from './content/Popular'
 
 class Home extends Component {
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-          category: '0',
-          popular: [],
-          base_url: 'https://belajar-react.smkmadinatulquran.sch.id/api/',
-          item: null,
-          order: {},
-        }
-      }
-    
-      popularOnChange = (e) => {
-        return fetch(`${this.state.base_url}populer?category_id=${e}`,
-          {
-            method: 'POST',
-          })
-          .then(response => response.json())
-          .then(responseJson => {
-            this.setState({
-              popular: responseJson.data
-            })
-          })
-          .catch(error => 'error')
-      }
-    
-      handlerModal = (item) => {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      category: '0',
+      popular: [],
+      base_url: 'https://belajar-react.smkmadinatulquran.sch.id/api/',
+      item: null,
+      order: {},
+    }
+  }
+
+  popularOnChange = (e) => {
+    return fetch(`${this.state.base_url}populer?category_id=${e}`,
+      {
+        method: 'POST',
+      })
+      .then(response => response.json())
+      .then(responseJson => {
         this.setState({
-          item: item,
+          popular: responseJson.data
         })
-      }
-    
-      onOrderHandler = data => {
-        this.setState({
-          order: data
-        });
-        console.log();
-      }
+      })
+      .catch(error => 'error')
+  }
+
+  handlerModal = (item) => {
+    this.setState({
+      item: item,
+    })
+  }
+
+  onOrderHandler = data => {
+    this.setState({
+      order: data
+    });
+    console.log();
+  }
 
 
 
@@ -79,14 +79,14 @@ class Home extends Component {
                         <div className="col-8">
                             <Promo />
                             <Category popular={this.popularOnChange}/>
-                            <Food popular={this.state.popular} onShowModal={this.handlerModal}/>
+                            <Popular popular={this.state.popular} onShowModal={this.handlerModal}/>
                         </div>
                         <div className="col-4">
-                            <Order />
+                            <Order item={this.state.order}/>
                         </div>
                     </div>
                 </div>
-                <Modal item={this.state.item} onOrderHandler={this.onOrderHandler}/>
+                <Modal item={this.state.item} onOrderHandler={this.onOrderHandler} />
             </div>
         </Fragment>
     );
