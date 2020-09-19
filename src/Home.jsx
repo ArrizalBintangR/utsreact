@@ -78,7 +78,7 @@ class Home extends Component {
                     <div className="row">
                         <div className="col-8">
                             <Promo />
-                            <Category/>
+                            <Category popular={this.popularOnChange}/>
                             <Food popular={this.state.popular} onShowModal={this.handlerModal}/>
                         </div>
                         <div className="col-4">
@@ -86,6 +86,7 @@ class Home extends Component {
                         </div>
                     </div>
                 </div>
+                <Modal item={this.state.item} onOrderHandler={this.onOrderHandler}/>
             </div>
         </Fragment>
     );
