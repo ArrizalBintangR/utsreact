@@ -1,0 +1,120 @@
+.bg-search {
+    background-color: white;
+    border: none;
+    height: 31px;
+}
+.lebar {
+    border: none;
+}
+input.form-control {
+    width: 500px!important;
+    height: 5px;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.bg-notif {
+    background-color: #fdcb6e;
+    border-radius: 25px;
+    color: #2c3e50;
+}
+.jarak {
+    margin-top: 5px;
+}
+.edgeimage {
+    border-radius: 14px;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.isi {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    margin-right: 15px;
+    width: 186px;
+    height: 110px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.isi img {
+    width: 186px;
+    height: 110px;
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    font-size: 10px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 14px;
+  }
+.ukuranjudul {
+    font-weight: 700;
+}
+.ukurantext {
+    font-size: 14px;
+    font-weight: 550;
+}
+/* .kategori {
+} */
+.isimakan {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    margin-right: 15px;
+    width: 250px;
+    height: 115px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.isimakan img {
+    width: 300px;
+    height: 130px;
+}
+.kartuatm {
+    background-color: #6455c2;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    border-radius: 12px;
+}
+.nomorkartu {
+    font-weight: 50;
+    word-spacing: 12px;
+}
+.ukurantable {
+    font-size: 14px;
+    margin-left: 40px;
+}
+.totaljarak {
+    padding-top: 55px;
+}
+.sizepesan {
+    font-size: 20px;
+    font-weight: bold;
+}
+.order{
+    border: none;
+}
+.hoverimg{
+    border-radius: 12px;
+    transition: 0.2s;
+}
+.hoverimg:hover{
+    transform: scale(1.1);
+    border-radius: 12px;
+}
